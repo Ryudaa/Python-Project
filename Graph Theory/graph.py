@@ -2,6 +2,7 @@ from tabulate import tabulate
 import itertools
 import numpy
 from celline_graph import find_shortest_path as dist
+from celline_graph import write_file
 
 # Mencari jarak antar vertex pada suatu graf #
 ##################################################################################
@@ -53,16 +54,14 @@ for v in vertex:
 
 tabel = tabulate(isi_table, headers=header, tablefmt="grid")+"\n"
 #print(tabel)
-saveFile = open('output_tabel_jarak.txt', 'w')
-saveFile.write("Jarak antar vertex :\n")
-saveFile.write(tabel)
-saveFile.close()
+write_file('output_tabel_jarak.txt', tabel)
 
 comb = list(itertools.combinations(vertex, 2))
 list_w = []
 list_w_i = []
 list_r = []
 r_vj_w = []
+list_v_memenuhi = []
 for c in comb:
     kiri = c[0]
     #print(str(vertex.index(c[0])+1)+str(c[0]))
@@ -85,27 +84,43 @@ for c in comb:
 
     for i in range(0, len(vertex)):
         r_vj_w_i = "r("+str(vertex[i])+"|"+w_string+")={"+isi_table[i][baris]+","+isi_table[i][kolom]+"}"
-        if (isi_table[i][kolom] == jarak_baris_kolom and i!=baris-1):
-            r_vj_w.append(str(r_vj_w_i)+"BREAK")
-            continue
-        r_vj_w.append(str(r_vj_w_i))
+        
+        #cek kiri
+        jumlah_sama_b = 0
+        jumlah_sama_k = 0
+        for j in range(0, len(vertex)):
+            if isi_table[i][baris] == isi_table[j][baris]:
+                jumlah_sama_b += 1
+            if isi_table[i][kolom] == isi_table[j][kolom]:
+                jumlah_sama_k += 1
+        
+        if (jumlah_sama_b == 1 and jumlah_sama_k == 1):
+            r_vj_w.append(str(r_vj_w_i)+" Y")
+            list_v_memenuhi.append(str("r("+str(vertex[i])+"|"+w_string+")"))
+        else:
+            r_vj_w.append(str(r_vj_w_i)+" N")
+
+        #if (isi_table[i][kolom] == jarak_baris_kolom and i!=baris-1):
+        #    r_vj_w.append(str(r_vj_w_i)+"BREAK")
+        #    continue
+        #r_vj_w.append(str(r_vj_w_i))
         #print(r_vj_w_i)
 
 list_w.append(list_w_i)
 list_w.append(list_r)
 list_w = numpy.transpose(list_w)
 tabel_2 = tabulate(list_w, tablefmt="grid")
-saveFile2 = open('output_tabel_w.txt', 'w')
-saveFile2.write(tabel_2)
-saveFile2.close()
+write_file('output_tabel_w.txt', tabel_2)
 
 #r_vj_w = numpy.transpose(r_vj_w)
 tabel_3 = tabulate(r_vj_w)
-saveFile3 = open('output_tabel_rw.txt', 'w')
-saveFile3.write(tabel_3)
-saveFile3.close()
+write_file('output_tabel_rw.txt', tabel_3)
 #print(r_vj_w)
+
+tabel_4 = tabulate(list_v_memenuhi)
+write_file('output_tabel_v_dan_w_yg_memenuhi.txt', tabel_4)
 
 print("jarak antar vertex : output_tabel_jarak.txt")
 print("semua kemungkinan w : output_tabel_w.txt")
 print("r(v|w) : output_tabel_rw.txt")
+print("r(v|w) yg memenuhi untuk semua vertex : output_tabel_v_dan_w_yg_memenuhi.txt")

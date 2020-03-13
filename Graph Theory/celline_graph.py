@@ -12,3 +12,8 @@ def find_shortest_path(graphh, start, end, path=[]):
                 if not shortest or len(newpath) < len(shortest):
                     shortest = newpath
     return shortest
+
+def write_file(nama, text):
+    saveFile = open(nama, 'w')
+    saveFile.write(text)
+    saveFile.close()
