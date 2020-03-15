@@ -4,9 +4,9 @@ Penjelasan setiap file dan folder
 
 ##Contents
 - [Folder Output](#folder-output)
-- [defgraph.py](#defgraph.py)
-- [graph.py](#graph.py)
-- [programs.py](#programs.py)
+- [defgraph.py](#defgraphpy)
+- [graph.py](#graphpy)
+- [programs.py](#programspy)
 
 ### Folder Output
 Di folder ini semua output program disimpan.
