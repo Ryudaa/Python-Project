@@ -23,14 +23,14 @@ vertexx = ["v1", "v2", "v3"]
 ```
 Jangan diberi nama `vertex` karena nama itu nanti akan dipakai.
 
-Selanjutnya menentukan edge pada graf. misalkan ada 2 edge, yaitu `(v1,v2)` dan `(v2,v3)`
+Selanjutnya menentukan edge pada graf. Misalkan ada 2 edge, yaitu `(v1,v2)` dan `(v2,v3)`.
 ```
 graph = {"v1":["v2"],
   "v2":["v1", "v3"],
   "v3":["v2"]
   }
 ```
-Perhatikan bahwa tidak cukup menjelaskan v1 adjacent dengan v2, tapi juga harus sebaliknya.
+Perhatikan bahwa tidak cukup menjelaskan `v1` adjacent dengan `v2`, tapi juga harus sebaliknya.
 
 ### programs.py
 File yang harus di run lewat Command Prompt.
