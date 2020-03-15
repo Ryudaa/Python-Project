@@ -11,10 +11,10 @@ Penjelasan setiap file dan folder
 ### Folder Output
 Di folder ini semua output program disimpan.
 
-### Defgraph.py
+### defgraph.py
 Berisi fungsi-fungsi program.
 
-### Graph.py
+### graph.py
 Tempat untuk membentuk graph.
 
 Contoh membentuk graf dengan 3 vertex :
@@ -31,3 +31,6 @@ graph = {"v1":["v2"],
   }
 ```
 Perhatikan bahwa tidak cukup menjelaskan v1 adjacent dengan v2, tapi juga harus sebaliknya.
+
+### programs.py
+File yang harus di run lewat Command Prompt.
