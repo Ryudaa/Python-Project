@@ -37,4 +37,8 @@ Perhatikan bahwa tidak cukup menjelaskan `v1` adjacent dengan `v2`, tapi juga ha
 File yang harus di run lewat Command Prompt.
 
 ### requirements.txt
-Berisi modul-modul Python3 yang harus terinstall untuk dapat menjalankan `programs.py`. Jalankan `pip install requirements.txt` pada Command Prompt untuk menginstall semua modul yang diperlukan.
+Berisi modul-modul Python3 yang harus terinstall untuk dapat menjalankan `programs.py`. Jalankan
+```
+pip install requirements.txt
+```
+pada Command Prompt untuk menginstall semua modul yang diperlukan.
