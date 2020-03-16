@@ -2,8 +2,6 @@
 
 NB : Baru dicoba untuk _connected graph_.
 
-Penjelasan setiap file dan folder.
-
 ## Contents
 - [Folder Output](#folder-output)
 - [defgraph.py](#defgraphpy)
