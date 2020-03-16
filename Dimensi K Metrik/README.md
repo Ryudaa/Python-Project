@@ -7,6 +7,7 @@ NB : Baru dicoba untuk _connected graph_.
 - [defgraph.py](#defgraphpy)
 - [graph.py](#graphpy)
 - [programs.py](#programspy)
+- [requirements.txt](#requirementstxt)
 
 ### Folder Output
 Di folder ini semua output program disimpan.
@@ -34,3 +35,6 @@ Perhatikan bahwa tidak cukup menjelaskan `v1` adjacent dengan `v2`, tapi juga ha
 
 ### programs.py
 File yang harus di run lewat Command Prompt.
+
+### requirements.txt
+Berisi modul-modul Python3 yang harus terinstall untuk dapat menjalankan `programs.py`. Jalankan `pip install requirements.txt` pada Command Prompt untuk menginstall semua modul yang diperlukan.
