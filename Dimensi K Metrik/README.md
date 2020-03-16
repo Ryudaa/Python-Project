@@ -2,7 +2,7 @@
 
 Penjelasan setiap file dan folder
 
-##Contents
+## Contents
 - [Folder Output](#folder-output)
 - [defgraph.py](#defgraphpy)
 - [graph.py](#graphpy)
