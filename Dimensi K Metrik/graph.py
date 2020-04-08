@@ -9,6 +9,9 @@ vertex2 = ['a','b','c','d','e','f','g','h','i','j']
 # Graphnya Erik
 vertex3 = ['v1','v2','v3','v4','u1','u2','u3','u4']
 
+# Graph Celline 6 April 2020
+vertex4 =['v1','v2','v3','v4','v5','v6','v7']
+
 # Keterhubungan vertex
 # Format : 'vertex':['adjacent1','adjacent2']
 # jika v1 adjacent dengan v2 maka ditulis dua kali (untuk setiap vertex)
@@ -48,8 +51,17 @@ graph3= {'v1':['v2','v4','u1','u2','u4'],
     'u3':['v2','v3','v4','u2','u4'],
     'u4':['v1','v3','v4','u1','u3']
     }
+graph4= {'v1':['v2','v3','v4','v5','v7'],
+    'v2':['v1','v5','v6','v7'],
+    'v3':['v1','v5','v6','v7'],
+    'v4':['v1','v5','v6','v7'],
+    'v5':['v1','v2','v3','v4','v6'],
+    'v6':['v2','v3','v4','v5','v7'],
+    'v7':['v1','v2','v3','v4','v6']
+    }
+
 
 #########################################
-vertex = vertex3
-g = graph3
+vertex = vertex4
+g = graph4
 #########################################
