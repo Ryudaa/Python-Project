@@ -4,6 +4,7 @@ from defgraph import ktwo
 from defgraph import stwo
 from defgraph import sthree
 from defgraph import sfour
+from defgraph import sfive
 
 from graph import vertex
 from graph import g
@@ -18,6 +19,7 @@ print('k2 : K-metrik dimensi 2')
 print('s2 : S dengan ukuran 2')
 print('s3 : S dengan ukuran 3')
 print('s4 : S dengan ukuran 4')
+print('s5 : S dengan ukuran 5')
 dimensi = input('Pilih 1 : ')
 
 # Dimensi 2 : two, dua, 2
@@ -29,6 +31,8 @@ elif dimensi == 's3':
     sthree(vertex, g)
 elif dimensi == 's4':
     sfour(vertex, g)
+elif dimensi == 's5':
+    sfive(vertex, g)
 else:
     print('Dimensi tidak sesuai. Silahkan baca programs.py untuk info lebih lanjut')
     print('Untuk dimensi 2, tuliskan "2", "dua", atau "two" tanpa tanda petik')
